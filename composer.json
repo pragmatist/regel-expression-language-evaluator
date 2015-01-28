@@ -1,0 +1,39 @@
+{
+    "name": "pragmatist/regel-expression-language-evaluator",
+    "description": "A condition evaluator based on the Symfony Expression Language component.",
+    "keywords": ["rule engine", "business rules", "expression language"],
+    "license": "MIT",
+    "homepage": "https://github.com/pragmatist/regel-expression-language-evaluator",
+    "authors": [
+        {
+            "name": "Frank van den Brink",
+            "email": "frank@pragmatist.nl",
+            "homepage": "https://pragmatist.nl"
+        }
+    ],
+    "require": {
+        "php":  ">=5.5",
+        "pragmatist/regel": "0.0.*@dev",
+        "symfony/expression-language": "~2.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.4",
+        "mockery/mockery": "0.9.*",
+        "squizlabs/php_codesniffer": "~2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pragmatist\\Regel\\ExpressionLanguageEvaluator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pragmatist\\Regel\\Tests\\ExpressionLanguageEvaluator\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0.x-dev"
+        }
+    }
+}
