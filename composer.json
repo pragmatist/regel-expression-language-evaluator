@@ -1,6 +1,6 @@
 {
     "name": "pragmatist/regel-expression-language-evaluator",
-    "description": "A condition evaluator based on the Symfony Expression Language component.",
+    "description": "A Regel condition evaluator based on the Symfony Expression Language component",
     "keywords": ["rule engine", "business rules", "expression language"],
     "license": "MIT",
     "homepage": "https://github.com/pragmatist/regel-expression-language-evaluator",

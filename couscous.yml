@@ -1,0 +1,14 @@
+title: Regel\ExpressionLanguageEvaluator
+subTitle: A Regel condition evaluator based on the Symfony Expression Language component
+baseUrl: http://pragmatist.github.io/regel
+template:
+    url: https://github.com/CouscousPHP/Template-Dark
+menu:
+    sections:
+        introduction:
+            name: Introduction
+            items:
+                getting_started:
+                    itemId: getting_started
+                    text: Getting started
+                    relativeUrl: doc/getting_started.html
