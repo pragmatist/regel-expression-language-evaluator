@@ -39,7 +39,7 @@ final class ExpressionLanguageConditionEvaluator implements ConditionEvaluator
         try {
             /** @var ExpressionLanguageCondition $condition */
             return (bool) $this->expressionLanguage->evaluate(
-                $condition->getExpression(),
+                $condition->expression(),
                 ['subject' => $subject]
             );
         } catch (SyntaxError $syntaxError) {

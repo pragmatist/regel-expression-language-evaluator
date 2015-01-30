@@ -29,7 +29,7 @@ final class ExpressionLanguageCondition implements Condition
     /**
      * @return string|Expression
      */
-    public function getExpression()
+    public function expression()
     {
         return $this->expression;
     }

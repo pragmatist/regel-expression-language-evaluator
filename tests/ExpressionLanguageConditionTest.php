@@ -14,7 +14,7 @@ final class ExpressionLanguageConditionTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertEquals(
             'my expression',
-            (new ExpressionLanguageCondition('my expression'))->getExpression()
+            (new ExpressionLanguageCondition('my expression'))->expression()
         );
     }
 
@@ -27,7 +27,7 @@ final class ExpressionLanguageConditionTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(
             $expression,
-            (new ExpressionLanguageCondition($expression))->getExpression()
+            (new ExpressionLanguageCondition($expression))->expression()
         );
     }
 
