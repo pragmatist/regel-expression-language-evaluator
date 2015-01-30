@@ -1,6 +1,6 @@
 title: Regel\ExpressionLanguageEvaluator
 subTitle: A Regel condition evaluator based on the Symfony Expression Language component
-baseUrl: http://pragmatist.github.io/regel
+baseUrl: http://pragmatist.github.io/regel-expression-language-evaluator
 template:
     url: https://github.com/CouscousPHP/Template-Dark
 menu:
