@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Regel\ExpressionLanguageEvaluator</title>
+
+        <link rel="stylesheet" href="http://pragmatist.github.io/regel/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://pragmatist.github.io/regel/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://pragmatist.github.io/regel/css/highlight.tomorrow-night.css">
+        <link rel="stylesheet" href="http://pragmatist.github.io/regel/css/main.css">
+    </head>
+    <body>
+
+        <header class="navbar navbar-default navbar-fixed-top">
+
+            <a class="navbar-brand" href="http://pragmatist.github.io/regel/">
+                Regel\ExpressionLanguageEvaluator
+                <small class="hidden-xs hidden-sm">
+                    A Regel condition evaluator based on the Symfony Expression Language component
+                </small>
+            </a>
+
+            
+        </header>
+
+        <main class="container-fluid">
+            <div class="row">
+
+                
+                    <nav id="sidebar" class="col-sm-3 col-lg-2" role="navigation">
+
+                                                    <p class="text-muted">
+                                Introduction
+                            </p>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                                                    <li class="active">
+                                        <a href="http://pragmatist.github.io/regel/doc/getting_started.html">
+                                            Getting started
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        
+                    </nav>
+
+                
+                <section class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
+                    <h1>Getting started</h1>
+<h2>Installation</h2>
+<p>Using <a href="https://getcomposer.org/">Composer</a>:</p>
+<pre><code class="language-bash">composer require pragmatist/regel-expression-language-evaluator</code></pre>
+<h2>Defining your conditions</h2>
+<p>You can add an Expression Language condition to a rule just like you normally would.</p>
+<pre><code class="language-php">use Pragmatist\Regel\Action\CallableAction;
+use Pragmatist\Regel\ExpressionLanguageEvaluator\ExpressionLanguageCondition;
+use Pragmatist\Regel\Rule\ActionableRule;
+
+$rule = new ActionableRule(
+    new ExpressionLanguageCondition("subject.body matches '/important/i'"),
+    new CallableAction(
+        function ($subject) {
+            echo "E-mail '{$subject-&gt;subject}' is important!'\n";
+        }
+    )
+)</code></pre>
+<h2>Using the condition evaluator</h2>
+<p>Just inject the Expression Language condition evaluator into the rule engine, and you're done.</p>
+<pre><code class="language-php">use Pragmatist\Regel\Action\CallableActionExecutor;
+use Pragmatist\Regel\Engine\ActionEngine;
+use Pragmatist\Regel\ExpressionLanguageEvaluator\ExpressionLanguageConditionEvaluator;
+use Pragmatist\Regel\RuleSetProvider\InMemoryRuleSetProvider;
+
+$engine = new ActionEngine(
+    new InMemoryRuleSetProvider(),
+    new ExpressionLanguageConditionEvaluator(),
+    new CallableActionExecutor()
+);</code></pre>
+                </section>
+
+            </div>
+        </main>
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="http://yandex.st/highlightjs/7.5/highlight.min.js"></script>
+
+        <script>
+            $(function() {
+                $("section>h1").wrap('<div class="page-header" />');
+                // Syntax highlighting
+                hljs.initHighlightingOnLoad();
+            });
+        </script>
+
+    </body>
+</html>

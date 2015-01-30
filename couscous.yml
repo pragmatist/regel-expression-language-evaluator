@@ -1,14 +1,27 @@
-title: Regel\ExpressionLanguageEvaluator
-subTitle: A Regel condition evaluator based on the Symfony Expression Language component
-baseUrl: http://pragmatist.github.io/regel
 template:
-    url: https://github.com/CouscousPHP/Template-Dark
+    directory: .
+
+github:
+    user: CouscousPHP
+    repo: Template-Dark
+
+title: Couscous template
+subTitle: The dark template for Couscous.
+
+# The left menu bar
 menu:
     sections:
-        introduction:
-            name: Introduction
+        main:
+            name: Main documentation
             items:
-                getting_started:
-                    itemId: getting_started
-                    text: Getting started
-                    relativeUrl: doc/getting_started.html
+                home:
+                    text: Home page
+                    # You can use relative urls
+                    relativeUrl: doc/faq.html
+                foo:
+                    text: Another link
+                    # Or absolute urls
+                    absoluteUrl: https://example.com
+        other:
+            name: Other topics
+            items:
